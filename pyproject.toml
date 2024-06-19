@@ -2,13 +2,13 @@
 name = "fastapi-ml-template"
 version = "0.1.0"
 description = ""
-authors = ["Yuki Okuda <y.okuda@dr-ubie.com>"]
+authors = ["Yuki Okuda <y.okuda@dr-ubie.com>","Oksana Sydoruk <sydoruk.ok@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
 uvicorn = "^0.22.0"  # Оновлено
 fastapi = "^0.98.0"  # Оновлено
-pydantic = "^1.10.8"  # Оновлено
+pydantic-settings = "^0.1.0"#newer lib
 requests = "^2.31.0"  # Оновлено
 
 [tool.poetry.dev-dependencies]
