@@ -6,23 +6,23 @@ authors = ["Yuki Okuda <y.okuda@dr-ubie.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-uvicorn = "^0.17.4"
-fastapi = "^0.73.0"
-pydantic = "^1.9.0"
-requests = "^2.27.1"
+uvicorn = "^0.22.0"  # Оновлено
+fastapi = "^0.98.0"  # Оновлено
+pydantic = "^1.10.8"  # Оновлено
+requests = "^2.31.0"  # Оновлено
 
 [tool.poetry.dev-dependencies]
-ipython = "^8.0.1"
-ipdb = "^0.13.9"
-flake8 = "^4.0.1"
-black = "^22.1.0"
-isort = "^5.10.1"
-pytest = "^7.0.1"
-tox = "^3.24.5"
+ipython = "^8.15.0"  # Оновлено
+ipdb = "^0.13.13"  # Оновлено
+flake8 = "^6.1.0"  # Оновлено
+black = "^23.3.0"  # Оновлено
+isort = "^5.12.0"  # Оновлено
+pytest = "^7.3.2"  # Оновлено
+tox = "^4.5.2"  # Оновлено
 
 [tool.black]
 line-length = 120
-target-version = ['py38']
+target-version = ['py39']  # Оновлено до відповідної версії Python
 include = '\.pyi?$'
 exclude = '''
 
