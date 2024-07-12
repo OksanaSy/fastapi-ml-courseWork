@@ -1,0 +1,41 @@
+{
+	"info": {
+		"_postman_id": "039b0309-bbc2-4797-8bb0-5cadc311fcec",
+		"name": "PYTHONstudy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26602860"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"method\": \"cosine\",\n    \"line1\": \"My mistress' eyes are nothing like the sun; Coral is far more red than her lips' red;\",\n    \"line2\":\"My mistress, when she walks, treads on the ground.And yet, I think my love as rare As any she belied with false compare.\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9000/calculate_similarity",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9000",
+					"path": [
+						"calculate_similarity"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
