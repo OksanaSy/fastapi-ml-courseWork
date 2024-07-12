@@ -6,7 +6,7 @@ from app.api.api import api_router
 from app.api.heartbeat import heartbeat_router
 from app.core.config import settings
 from app.core.event_handler import start_app_handler, stop_app_handler
-from app.models.predict import SimilarityMethod, SimilarityRequest
+from app.models.predict import SimilarityMethod, SimilarityRequest, SimilarityResponse
 
 app = FastAPI(title=settings.PROJECT_NAME)
 
@@ -25,6 +25,7 @@ METHOD_TO_FUNCTION = {
 }
 
 @app.post("/calculate_similarity")
+@app.get("/calculate_similarity")
 async def calculate_similarity(request: SimilarityRequest) -> SimilarityResponse:
     method = request.method
     line1 = request.line1
@@ -45,7 +46,6 @@ async def calculate_similarity(request: SimilarityRequest) -> SimilarityResponse
     return response
 
 if __name__ == "__main__":
-
     import uvicorn
 
     uvicorn.run(app, host="0.0.0.0", port=8001, log_level="debug")
