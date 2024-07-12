@@ -1,0 +1,16 @@
+POST: http://127.0.0.1:9000/calculate_similarity
+
+{
+    "method": "cosine",
+    "line1": "My mistress' eyes are nothing like the sun; Coral is far more red than her lips' red;",
+    "line2":"My mistress, when she walks, treads on the ground.And yet, I think my love as rare As any she belied with false compare."
+}
+
+
+answer:
+{
+    "method": "cosine",
+    "line1": "My mistress' eyes are nothing like the sun; Coral is far more red than her lips' red;",
+    "line2": "My mistress, when she walks, treads on the ground.And yet, I think my love as rare As any she belied with false compare.",
+    "similarity": 0.4600920276092032
+}
