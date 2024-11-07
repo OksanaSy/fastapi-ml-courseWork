@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from app.predict import router as predict_router
+from app.group import router as group_router
 from textdistance import Cosine, Jaccard, Levenshtein
 from typing import Union
 
@@ -13,6 +14,7 @@ app = FastAPI(title=settings.PROJECT_NAME)
 
 app.include_router(heartbeat_router)
 app.include_router(predict_router)
+app.include_router(group_router)
 app.include_router(api_router, prefix=settings.API_V1_STR, tags=["ML API"])
 
 app.add_event_handler("startup", start_app_handler(app, settings.MODEL_PATH))
