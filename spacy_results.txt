@@ -1,0 +1,13 @@
+INFO:     Started reloader process [16365] using StatReload
+Accuracy: 0.90
+Doc2Vec модель успішно збережена як 'doc2vec_model.model'
+INFO:     Started server process [16367]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Tokens after lemmatization: ['sample', 'sentence', 'preprocesse']
+INFO:     127.0.0.1:54813 - "POST /preprocess/?method=spacy HTTP/1.1" 200 OK
+
+
+(.venv) sydorukoksana@Noutbuk-Oksana fastapi-ml-courseWork % curl -X POST "http://127.0.0.1:8000/preprocess/?method=spacy" -H "Content-Type: application/json" -d '{"text": "This is a sample sentence for preprocessing."}'
+
+{"preprocessed_text":"sample sentence preprocesse"}%                                                                                 (.venv) sydorukoksana@Noutbuk-Oksana fastapi-ml-courseWork % 
